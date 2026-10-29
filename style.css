@@ -1,0 +1,125 @@
+body {
+    margin: 0;
+    font-family: Arial, sans-serif;
+    height: 100vh;
+}
+
+/* Background */
+.background {
+    background: url("/static/images/goa.jpg") center/cover no-repeat;
+    position: fixed;
+    top:0;
+    left:0;
+    width:100%;
+    height:100%;
+    filter: blur(4px);
+    z-index: -1;
+}
+
+/* Main App */
+.app-container {
+    width: 70%;
+    margin: 30px auto;
+    background: rgba(255,255,255,0.95);
+    border-radius: 15px;
+    padding: 15px;
+    box-shadow: 0 10px 40px rgba(0,0,0,0.3);
+}
+
+header {
+    text-align: center;
+    font-size: 26px;
+    font-weight: bold;
+    color: #1e40af;
+    margin-bottom: 10px;
+}
+
+/* Controls */
+.controls {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.controls select {
+    padding: 10px;
+    font-size: 16px;
+    margin-bottom: 10px;
+    border-radius: 8px;
+}
+
+.categories button {
+    margin: 5px;
+    padding: 8px 15px;
+    border: none;
+    border-radius: 20px;
+    background: #2563eb;
+    color: white;
+    cursor: pointer;
+}
+
+.categories button:hover {
+    background: #1d4ed8;
+}
+
+/* Chat */
+.chat-box {
+    height: 350px;
+    background: #f9fafb;
+    border-radius: 10px;
+    padding: 10px;
+    overflow-y: auto;
+    margin-top: 10px;
+}
+
+.user-msg {
+    text-align: right;
+    background: #2563eb;
+    color: white;
+    padding: 8px 12px;
+    border-radius: 15px;
+    margin: 5px;
+    display: inline-block;
+}
+
+.bot-msg {
+    text-align: left;
+    background: #e5e7eb;
+    padding: 8px 12px;
+    border-radius: 15px;
+    margin: 5px;
+    display: inline-block;
+}
+
+/* Images */
+.image-grid {
+    display: flex;
+    gap: 10px;
+    margin-top: 10px;
+}
+
+.image-grid img {
+    width: 150px;
+    height: 100px;
+    object-fit: cover;
+    border-radius: 10px;
+}
+
+/* Input */
+.chat-input {
+    display: flex;
+    margin-top: 10px;
+}
+
+.chat-input input {
+    flex: 1;
+    padding: 10px;
+    font-size: 16px;
+}
+
+.chat-input button {
+    padding: 10px 20px;
+    background: #2563eb;
+    color: white;
+    border: none;
+}

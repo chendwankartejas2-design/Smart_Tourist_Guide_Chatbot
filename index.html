@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>AI Tourist Chatbot</title>
+    <link rel="stylesheet" href="{{ url_for('static', filename='style.css') }}">
+</head>
+<body>
+
+<div class="background"></div>
+
+<div class="app-container">
+    <header>
+        🇮🇳 AI Tourist Guide
+    </header>
+
+    <!-- Controls -->
+    <div class="controls">
+        <select id="city">
+            <option value="">Select City</option>
+            <option>Goa</option>
+            <option>Mumbai</option>
+            <option>Bangalore</option>
+            <option>Delhi</option>
+            <option>Kerla</option>
+            <option>Manali</option>
+            <option>MadhyaPradesh</option>
+            <option>Konkan</option>
+        </select>
+
+        <div class="categories">
+            <button onclick="sendCategory('places')">🏝 Places</button>
+            <button onclick="sendCategory('food')">🍴 Food</button>
+            <button onclick="sendCategory('stay')">🏨 Stay</button>
+            <button onclick="sendCategory('safety')">🛡 Safety</button>
+        </div>
+    </div>
+
+    <!-- Chat -->
+    <div id="chat-box" class="chat-box">
+        <div class="bot-msg">
+            🤖 Hello! Select a city and category to begin.
+        </div>
+    </div>
+
+    <!-- Manual Chat -->
+    <div class="chat-input">
+        <input type="text" id="user-input" placeholder="Ask anything... (e.g. Goa places)">
+        <button onclick="sendMessage()">Send</button>
+    </div>
+</div>
+
+<script src="{{ url_for('static', filename='script.js') }}"></script>
+</body>
+</html>
